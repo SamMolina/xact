@@ -1,0 +1,125 @@
+# X-Act — Sensible Defaults from Architect Assessment Framework maps with X-Act Taxonomy
+
+Architecture Assessment sensible defaults (`AA.*`, see `taxonomies/arch-assessment-taxonomy.md`) are mapped onto the X-Act hierarchy below. Each `↳` line is an Architecture Assessment sensible default attached to the X-Act node it best fits.
+
+## 1. Software Engineering
+
+- **1.1 Architecture Quality**
+  - 1.1.1 Architectural Style
+    - 1.1.1.1 Components
+    - 1.1.1.2 Dependencies
+    - 1.1.1.3 Data model
+  - 1.1.2 API Strategy
+    - ↳ AA.1.5 Create and advocate the use of Business Services catalog
+    - 1.1.2.1 Standards
+      - ↳ AA.2.2 Define and Support Interface Contracts
+    - 1.1.2.2 API basic hygiene
+    - 1.1.2.3 API best practices
+  - 1.1.3 Technology Stack
+    - 1.1.3.1 Technology Stack
+      - ↳ AA.1.4 Make business-based Make or Buy decisions
+      - ↳ AA.2.1 Support Make or Buy Decisions (technically)
+      - ↳ AA.4.2 Map technologies used and market trends
+      - ↳ AA.5.2 Obsolescence Management
+  - 1.1.4 Performance
+    - 1.1.4.1 Resilience
+    - 1.1.4.2 Scalability
+    - 1.1.4.3 Availability
+  - 1.1.5 Governance
+    - ↳ AA.7.1 Define the Organizational Design to deliver value
+    - ↳ AA.7.2 Define COEA vision/mission and success metrics
+    - ↳ AA.7.4 Manage the demands of the COEA
+    - 1.1.5.1 Architecture decisions
+      - ↳ AA.3.1 Architecture & Design Principles Defined and Published
+      - ↳ AA.3.2 Architecture Mandates Defined and Published
+    - 1.1.5.2 Conformance
+      - ↳ AA.2.5 Knowledge of available guardrails, limitations and enablers
+- **1.2 DevOps**
+  - 1.2.1 Continuous Integration and Deployment
+    - 1.2.1.1 Build
+    - 1.2.1.2 Deployment
+  - 1.2.2 Production Operations
+    - ↳ AA.5.1 Operation efficiency management
+    - 1.2.2.1 Observability
+      - ↳ AA.5.3 Platform Health Management
+    - 1.2.2.2 Business Continuity
+      - ↳ AA.5.4 Business continuity management
+  - 1.2.3 Environments
+    - 1.2.3.1 Provisioning and use
+    - 1.2.3.2 Best Practices
+- **1.3 Quality Assurance**
+  - 1.3.1 Build In Quality Mindset
+    - 1.3.1.1 Business Goal Comprehension
+      - ↳ AA.1.1 Constantly seek the Vision of Future
+      - ↳ AA.1.2 Map the Value Chain in a clear and public way
+    - 1.3.1.2 Project Technical Comprehension
+      - ↳ AA.2.3 Knowledge/Problem domain related to the solution
+  - 1.3.2 Test Strategy
+    - 1.3.2.1 Test Preparedness
+    - 1.3.2.2 Sensible Defaults
+  - 1.3.3 Testing Organization Setup
+    - 1.3.3.1 Test Process
+    - 1.3.3.2 Metrics
+      - ↳ AA.2.4 Define the Solution Success Metrics and measure them
+    - 1.3.3.3 Test Management
+  - 1.3.4 Test Pyramid
+    - 1.3.4.1 Unit Testing
+    - 1.3.4.2 Functional Testing
+    - 1.3.4.3 Automation
+- **1.4 Code Quality**
+  - 1.4.1 Readability
+  - 1.4.2 Maintainability
+  - 1.4.3 Re-usability
+  - 1.4.4 Evolvability
+  - 1.4.5 Complexity
+  - 1.4.6 Testability
+  - 1.4.7 Tech Debt
+    - ↳ AA.2.6 Tech Debt Tracking
+  - 1.4.8 Logging
+  - 1.4.9 Exception Handling
+- **1.5 Agile Project Management**
+  - ↳ AA.7.3 Stakeholders Management
+  - ↳ AA.7.6 Foster a product culture rather than a project-driven culture
+- **1.6 Engineering Excellence**
+  - 1.6.1 Requirement Analysis
+    - 1.6.1.1 Requirement Analysis
+    - 1.6.1.2 Requirement Design
+      - ↳ AA.1.3 Business Process Modeling
+  - 1.6.2 Architecture and Design
+    - 1.6.2.1 Architecture Engagement
+      - ↳ AA.2.7 Give technical support to the business strategy
+      - ↳ AA.2.8 Solution design in collaboration with teams
+      - ↳ AA.4.1 Ease of funding for experimentation
+      - ↳ AA.4.3 Time and incentive to think about the future
+    - 1.6.2.2 Documentation
+      - ↳ AA.3.3 Define and publish Guardrails, Documentation and Enablers
+  - 1.6.3 Development
+    - 1.6.3.1 Development Discipline
+    - 1.6.3.2 Developer Onboarding & Cultivation
+      - ↳ AA.6.1 Define archetypes and competencies of the roles that perform the disciplines
+      - ↳ AA.6.2 Fund personal development
+      - ↳ AA.6.3 Foster knowledge sharing
+      - ↳ AA.7.5 Roles & Responsibilities Definition
+    - 1.6.3.3 Source Control Practices
+    - 1.6.3.4 Data Management Practices
+  - 1.6.4 Deployment
+    - 1.6.4.1 Pipeline
+    - 1.6.4.2 Cloud Practices
+  - 1.6.5 Quality Assurance
+    - 1.6.5.1 Shift-Left Testing/Quality
+  - 1.6.6 CFRs
+    - ↳ AA.3.4 Ensure compliance with non-functional requirements and define them if necessary
+    - 1.6.6.1 Accessibility
+    - 1.6.6.2 Logging
+- **1.7 DevSecOps**
+  - 1.7.1 DevSecOps Pipeline
+    - 1.7.1.1 Planning & Tracking
+    - 1.7.1.2 Configuration Management
+    - 1.7.1.3 Solution Development
+    - 1.7.1.4 Integration
+    - 1.7.1.5 Verification & Validation
+    - 1.7.1.6 Deployment
+    - 1.7.1.7 Monitor & Control
+    - 1.7.1.8 Hosting Services
+    - 1.7.1.9 Software Assurance
+    - 1.7.1.10 Quality Assurance
