@@ -680,3 +680,332 @@ _WIP — sub-modules to be defined_
     • Results from the automated auditing tools are automatically reported to all relevant stakeholders to ensure the quality of the automated auditing process, in addition to tracking noncompliance issues to resolution.
     • The system automatically identifies and tracks when the defined quality criteria have not been met or the automated quality controls have been bypassed. All relevant stakeholders will be automatically notified and the noncompliance issue will be tracked to closure.
 *   **Score 5:** _WIP — maturity scores to be defined_
+
+## 4. Operational Efficiency
+
+### 4.1 Product & platform stability
+
+#### 4.1.1 Availability
+
+*   **Score 1:** No historical trend on the downtime data. High Priority incidents are frequent along with very frequent downtimes. No historical trend in the peak usage data patterns. DR and BCP not in vogue. No failover mechanisms in place.
+*   **Score 2:** Data on downtime and peak usage is only for a quarter. SLAs are breached often. High priority incidents happen often, but not frequently. Failover mechanisms are in place but not measured for effectiveness. Overall resiliency of the application is measured but not as a norm or a continuous process. DR and BCP drills are in place, but not a norm.
+*   **Score 3:** All the resiliency data is available and tracked for at least 2-3 quarters and benchmarked. High-priority incidents are less frequent and are managed within the SLAs. Peak usage patterns are measured. Failover mechanisms are in place. DR and BCP plans and drills are in place and followed.
+*   **Score 4:** Sensible defaults. Resiliency data is measured and kept track of and used to continuously make changes to the systems to adapt to growing requirements. Load balancing and failover mechanisms are in place and effective to handle peak usage patterns. DR and BCP plans are very efficiently followed at set intervals.
+*   **Score 5:** Everything in 4 is constantly revisited and realigned based on business needs. Chaos engineering practices and AIOPs tools are in place.
+
+#### 4.1.2 Success indicators
+
+*   **Score 1:** No units defined, or units defined but no historical trends. No forecasting was done on the key business indicators. No data is being tracked on the product/platform metrics. No tracking on the deployment frequency, lead time for changes, availability, and performance of the application. No clear objectives on the availability and performance defined. Latency is not measured. Performance thresholds not defined.
+*   **Score 2:** Defined business units, and historical trends for units, but the limited ability for forecasting these units. Forecasts are either inaccurate or short-term (<=1 quarter). Data on latency, performance, and overall availability is defined but not tracked beyond a quarter. Deployment frequency is in place but not effectively followed, more ad-hoc still. Lead time to changes is again measured but not tracked over a longer period.
+*   **Score 3:** Have solid historical trend, have a forecast for 4-6 quarters. Have a non-trivial forecast model. Data on latency, performance, and overall availability is defined and measured over a year or more. Deployment frequency is in place and followed. Lead time to changes is measured and tracked over a year or more. Performance thresholds are measured and tracked regularly.
+*   **Score 4:** Have measured the accuracy of past predictions. Using 6-8 quarter forecasts. All data related to availability and performance are very efficiently tracked. Thresholds are established and constant adaptations are in place to ensure that the measured data are met and improved upon.
+*   **Score 5:** Defined & measured & accurate forecast, know how to forecast accurately & improving record of accuracy; accuracy of actual demand within 5% of 6-month forecast. Ongoing evaluation and refinement of all parameters regularly, possibly using AI-Ops methodologies.
+
+##### 4.1.2.1 Success indicators
+_Using maturity from sub-module_
+
+#### 4.1.3 Infrastructure
+
+*   **Score 1:** No clear multi-cloud, hybrid, on-prem, or cloud strategy for the next 3-4 years. Any issues related to infrastructure take a lot of time to get addressed. Infrastructure issues are frequent and are of high priority. Multiple points of failure. No IAC in place. Resources are deployed by hand in an ad hoc fashion. Relationships between system components are undocumented. No idea if the resources deployed are sufficient.
+*   **Score 2:** Infrastructure issues happen often. Single points of failure are identified. Cloud or hybrid strategy is in place. Rules of thumb exist for service constraints (database and web near each other) but constraints are not measured (unverified). Defined process for acquiring resources; but the process is manual.
+*   **Score 3:** IAC is in place but scattered. Documentations are in place. The team is moving completely towards the cloud. Acquiring resources is mostly automated. When acquiring resources is a manual process.
+*   **Score 4:** Sensible defaults are in place. Cloud adoption and usage is high. Comprehensive IAC is in place. Canary deployment pipelines are in place. Rollback strategies are in place. System constraints are modelled, but lack evaluation. Service churn over time can cause constraints in the model to drift from reality. When to acquire resources is driven by forecasting.
+*   **Score 5:** Everything in 4 is constantly revisited and realigned based on business needs. Models are continuously evaluated and maintained even against service churn. Where to acquire capacity is driven by models, and when to acquire capacity is driven by forecasting.
+
+##### 4.1.3.1 Infrastructure
+_Using maturity from sub-module_
+
+#### 4.1.4 Quality
+
+*   **Score 1:** No data on the measurements regarding Data consistency at a given point in time. No data on security vulnerabilities and data loss incidents. No indication of Tech Debt in the systems and no target for resolving the tech debt. Data inconsistency is high.
+*   **Score 2:** Vulnerabilities are assessed, but an effective remediation plan is not in place. Tech debt is tracked but no plan is in place for its reduction. Data inconsistency incidents are frequent and tracked only for the quarter.
+*   **Score 3:** High-priority Vulnerabilities and Data inconsistency issues are tracked. However, there is some lack in prioritizing and addressing them. Tech Debt reduction strategy is in place.
+*   **Score 4:** A vulnerability remediation plan is in place and followed judiciously. Tech Debt is paid off frequently. Teams do not have to practice Tech Debt sprints. Data inconsistency is tracked and remediated on priority without major business impact.
+*   **Score 5:** Security scanners are integrated into the pipeline. Chaos Engineering simulations are run from time to time. Tech Debt is handled with the understanding that the more successful product is, the higher the tech debt it carries. Tech Debt is paid off whenever touching the codebase.
+
+##### 4.1.4.1 Quality
+_Using maturity from sub-module_
+
+### 4.2 People, process & tools
+
+#### 4.2.1 Incident management
+
+*   **Score 1:** Ad hoc support: best effort, daytime only, no actual rotation, manual alerting, no defined escalation process. No follow-up or recognition of systemic error, no root cause, outages contained but not analysed, the same incident keeps happening, long term trends are not recognised.
+*   **Score 2:** Documented rotation and response time. Automated alerts integrated with monitoring. Training is ad hoc. Defined postmortem process with action items. Followup on action items is poor (only P0 items addressed.) Root cause analysis (RCA) is insufficient (not enough Whys). Similar incidents recur due to failure of action item follow-up or poor RCA.
+*   **Score 3:** Training process exists (wheel of misfortune, shadow on call, etc.) Rotation is fully staffed but some alerts require escalation to senior team members to resolve. The postmortem process is applied to all major incidents (action items). Action items at the P0 level are prioritized. RCA is extensive and correctly attributes the root cause in the majority of incidents.
+*   **Score 4:** Measurement of MTTR and MTTD for incidents. Handoff between rotations. Most incidents require minimal escalation (can be handled by on-call alone). Postmortems come with annotated metadata to facilitate analysis. Postmortems are shared widely amongst affected teams to learn from mistakes.
+*   **Score 5:** Weekly review of incidents and refinement of strategy, handoffs, communication between shifts, majority of problems resolved without escalation, review value and size of rotation, evaluating scope. Incident response protocol established. All action items are closed promptly on time, reviewed by involved teams and others for learning purposes, identify problem areas, a process in place to make sure action items are completed, standardised format, and review of the postmortem process to see if it provides value.
+
+##### 4.2.1.1 Incident reporting and tracking
+_Using maturity from sub-module_
+
+#### 4.2.2 Observability
+
+*   **Score 1:** No Dashboards. Data gathering is ad hoc, inconsistent, and undocumented. No logging/tracing mechanisms in place. Monitoring and alerting dont exist. Escalation matrix and Incident Response Plan or a playbook not in place.
+*   **Score 2:** Dashboards may exist for key metrics, but only in static form (no customization). Dashboards are not centrally located, or dashboard use is not standardised. Dashboard ownership is unclear. Logging and tracing are implemented but not very effectively. Monitoring and alerting mechanisms are not in place. Escalation matrix and IRP (Incident Response Plan) are in place but very formally followed.
+*   **Score 3:** Dashboards exist and support common technical use cases. Dashboard ownership is clear. Tools to support ad hoc queries exist but are somewhat cumbersome (using them requires training or hours of experimentation to produce a result.). Logging and tracing are well established and gather the right kind of data. Monitoring and alerting mechanisms are in place but at a very rudimentary level and do not cover the entire spectrum of services. IRP and Escalation matrix are in place and followed.
+*   **Score 4:** Dashboards support both technical and business use cases. Ad hoc data exploration tools are customizable and support common use cases without training (e.g. by following a recipe) or through intuitive interfaces. Logging and tracing are a norm and well established. Right kind of data gathered and retained for a defined period to be able to do Root Cause Analysis on issues. Monitoring and alerting mechanisms are set up efficiently and cover at least 80% of all the services. Thresholds are defined well in the monitoring tools to ensure true alerting and avoid false alerts.
+*   **Score 5:** Dashboards are standardized across the business units. Everything in 4 plus advanced mechanisms of AI-Ops are in vogue to ensure proper monitoring and alerting mechanisms. Logging and tracing covers all the services in place. Very efficient IRP and Escalation matrix process in place.
+
+##### 4.2.2.1 Alerting
+_Using maturity from sub-module_
+
+##### 4.2.2.2 Logging
+_Using maturity from sub-module_
+
+##### 4.2.2.3 Monitoring
+_Using maturity from sub-module_
+
+#### 4.2.3 Infrastructure
+
+*   **Score 1:** No Devops practises in place. No clear multi-cloud, hybrid, on prem or cloud strategy for the next 3-4 years. Pipelines break frequently. Deployment is done adhoc. Any issues related to infrastructure take a lot of time to get addressed. Infrastructure issues are frequent and are of high priority. Multiple points of failure. Resources are deployed by hand in an ad hoc fashion. Relationships between system components are undocumented. No idea if resources deployed are sufficient. No proper compliance in place. No proper authentication/authorization mechanisms in vogue.
+*   **Score 2:** DevOps maturity is low. DevOps teams are in place just to manage pipelines and deployments. Deployments are planned, but schedules and timelines are not stringent. Infrastructure issues happen often. Single points of failure are identified. Cloud or hybrid strategy is in place. Rules of thumb exist for service constraints (database and web near each other) but constraints are not measured (unverified). Defined process for acquiring resources; but the process is manual. Proper authentication mechanisms are in place but not authorization. Compliances are still not efficiently established.
+*   **Score 3:** DevOps is active in pipeline and infrastructure management. Deployments are well planned. Canary Deployment is in a strategy teams are being thought about. IAC is in place, but scattered. Documentations are in place. The team is moving completely towards cloud. Acquiring resources is mostly automated. When to acquire resources is a manual process. Regulatory compliances are very efficiently adhered to. All authentication and authorization mechanisms are in place.
+*   **Score 4:** Sensible defaults are in place. Cloud adoption and usage are high. A comprehensive IAC is in place. Canary deployment pipelines are in place. Rollback strategies are in place. System constraints are modeled, but lack evaluation. Service churn over time can cause constraints in the model to drift from reality. When to acquire resources is driven by forecasting. Regulatory compliances and authentication/authorization are all defaults and well established.
+*   **Score 5:** Everything in 4 is constantly revisited and realigned based on business needs. Models are continuously evaluated and maintained even against service churn. Where to acquire capacity is driven by models, and when to acquire capacity is driven by forecasting.
+
+##### 4.2.3.1 Accessibility
+_Using maturity from sub-module_
+
+##### 4.2.3.2 Compliance
+_Using maturity from sub-module_
+
+##### 4.2.3.3 Delivery
+_Using maturity from sub-module_
+
+##### 4.2.3.4 Hosting
+_Using maturity from sub-module_
+
+##### 4.2.3.5 Maintenance
+_Using maturity from sub-module_
+
+#### 4.2.4 Quality
+
+*   **Score 1:** No proper defect remediation in place. Unit Testing, No integration Testing. Manual testing is prevalent. No data on security vulnerabilities. No indication of Tech Debt in the systems. Data inconsistency is high.
+*   **Score 2:** Defect remediation plan is present, but not effectively followed. Vulnerabilities are assessed, but effective remediation plan. Unit tests are present. No proper integration test suite. Tech debt is tracked but no plan in place for its reduction. Data inconsistency incidents are frequent.
+*   **Score 3:** Unit test and Integration test are present. Test suite not integrated with the pipeline. Test coverage is between 50-60%. High priority Vulnerabilities and defects are prioritised and remediated based on priority level. Tech Debt reduction strategy is in place. Data inconsistency is tracked and remediated.
+*   **Score 4:** Automated test coverage suite integrated in the pipeline with test coverage is between 60-80%. Security practises are in place and security scans are done regularly. Vulnerability remediation plan is in place and followed judiciously. Tech Debt is paid off frequently. Teams to do not have practise of Tech Debt sprints. Data inconsistency is tracked and remediated on priority without major business impact.
+*   **Score 5:** Security scanners are integrated into the pipeline. Chaos Engineering simulations are run from time to time. Test coverage is above 80%. Tech Debt is handled with the understanding that the more successful product is, the higher tech debt it carries. Tech Debt is paid off whenever touching the codebase.
+
+##### 4.2.4.1 Resilience
+_Using maturity from sub-module_
+
+##### 4.2.4.2 Security
+_Using maturity from sub-module_
+
+#### 4.2.5 Culture
+
+*   **Score 1:** No clear separation of responsibilities between the teams.
+*   **Score 2:** Team level boundaries on their ownership exist but not very formally followed. Still presence of grey areas.
+*   **Score 3:** Separated responsibilities across the product teams with a clear line of leadership.
+*   **Score 4:** Well-established, de-centralised teams which have clearly defined responsibility boundaries and there are no gray areas.
+*   **Score 5:** Everything in 4 plus that the teams are completely decentralised and are highly autonomous in their functioning.
+
+##### 4.2.5.1 Execution
+_Using maturity from sub-module_
+
+### 4.3 Infrastructure Stability
+
+#### 4.3.1 Availability
+
+*   **Score 1:** No units defined, or units defined but no historical trends. Acquiring new resources is a very ad-hoc process. No understanding or forecasting of the resource management or requirement changes. Application artifacts are manually generated and deployed every time after a downtime.
+*   **Score 2:** Defined business units, historical trend for units, but limited ability for forecasting these units. Forecasts are either inaccurate or short-term (<=1 quarter). Service has defined SLOs. Service has measurement of SLO but it is ad hoc or undocumented. Forecasting of resource requirements in place but not effective and inaccurate. SLAs are in place but frequently breached. Additional resource requirements are managed but no formal process in place. Application artefacts generation is mostly manual.
+*   **Score 3:** Have solid historical trend, have a forecast for 4-6 quarters. Have a non-trivial forecast model. Service has defined SLOs. Measurement is a documented process with clear owner. SLAs are in place and followed with rigour with some slippages far and between. Additional resource requirements are forecasted accurately and is a well established process. Application artefact generation and restoration is well automated. Understanding of the increasing load on the system over a period of a year or more.
+*   **Score 4:** Have measured the accuracy of past predictions. Using 6-8 quarter forecasts. SLO is published to users. SLO is measured automatically. SLO represents user requirements. Measurements are well established. SLAs are efficiently followed and Resource requirements are well forecasted and prepared for. Acquiring is automated in many ways. System demand over the past year is well documented. The creation and restoration of artifacts are automated and very efficient.
+*   **Score 5:** Defined & measured & accurate forecast, know how to forecast accurately & improving record of accuracy; accuracy of actual demand within 5% of 6-month forecast. Ongoing evaluation and refinement of SLO with users. Resource needs are forecasted very efficiently and mechanisms for auto-scaling up and down are in place. Self-healing mechanisms are in place to ensure auto application artifacts are auto-generated and restored.
+
+##### 4.3.1.1 Capacity
+_Using maturity from sub-module_
+
+##### 4.3.1.2 Performance
+_Using maturity from sub-module_
+
+##### 4.3.1.3 Toil
+_Using maturity from sub-module_
+
+#### 4.3.2 Success indicators
+
+*   **Score 1:** No units defined, or units defined but no historical trends. Service has no SLO or SLO does not represent user requirements. TOIL is predominant across the board.
+*   **Score 2:** Defined business units, historical trend for units, but limited ability for forecasting these units. Forecasts are either inaccurate or short-term (<=1 quarter). Service has defined SLOs. Service has measurement of SLO but it is ad hoc or undocumented. TOIL is addressed albeit at a small scale. There still is a significant portion that is manual.
+*   **Score 3:** Have solid historical trend, have a forecast for 4-6 quarters. Have a non-trivial forecast model. Service has defined SLOs. Measurement is a documented process with clear owner. TOIL is controlled and are constantly addressed. However, not on a complete scale. Lot that are in scope for automation.
+*   **Score 4:** Have measured the accuracy of past predictions. Using 6-8 quarter forecasts. SLO is published to users. SLO is measured automatically. SLO represents user requirements. Error budgets are defined and followed and TOIL is pretty much non-existent.
+*   **Score 5:** Defined & measured & accurate forecast, know how to forecast accurately & improving record of accuracy; accuracy of actual demand within 5% of 6-month forecast. Ongoing evaluation and refinement of SLO with users. Well-defined Error budgets in place. Advanced AI-Ops mechanisms are in vogue to eliminate toil.
+
+##### 4.3.2.1 Metrics
+_Using maturity from sub-module_
+
+##### 4.3.2.2 Toil
+_Using maturity from sub-module_
+
+#### 4.3.3 Infrastructure
+
+*   **Score 1:** No DevOps practices in place. No clear multi-cloud, hybrid, on-prem or cloud strategy for the next 3-4 years. Pipelines break frequently. Deployment is done ad-hoc. Any issues related to infrastructure take a lot of time to get addressed. Infrastructure issues are frequent and are of high priority. Multiple points of failure. Resources are deployed by hand in an ad hoc fashion. Relationships between system components are undocumented. No idea if the resources deployed are sufficient. No Backup mechanisms in place.
+*   **Score 2:** DevOps maturity is low. DevOps teams are in place just to manage pipelines and deployments. Deployments are planned, but schedules and timelines are not stringent. Infrastructure issues happen often. Single points of failure are identified. Cloud or hybrid strategy is in place. Rules of thumb exist for service constraints (database and web near each other) but constraints are not measured (unverified). Defined process for acquiring resources; but the process is manual. Backup mechanisms are in place but not very efficiently managed. Data retained only for a few days.
+*   **Score 3:** DevOps is active in pipeline and infrastructure management. Deployments are well planned. Canary Deployment is a strategy teams are being thought about. IAC is in place but scattered. Documentations are in place. The team is moving completely towards the cloud. Acquiring resources is mostly automated. When acquiring resources is a manual process. Backup mechanisms are in place and data retention is for around a month and a very well-established restoration process as well.
+*   **Score 4:** Sensible defaults are in place. Cloud adoption and usage are high. Comprehensive IAC is in place. Canary deployment pipelines are in place. Rollback strategies are in place. System constraints are modelled, but lack evaluation. Service churn over time can cause constraints in the model to drift from reality. When to acquire resources is driven by forecasting. Backup mechanisms are in place, with a proper retention time of data being arrived at based on the changes going in. Properly established data restoration mechanisms are in place as well.
+*   **Score 5:** Everything in 4 is constantly revisited and realigned based on business needs. Models are continuously evaluated and maintained even against service churn. Where to acquire capacity is driven by models, and when to acquire capacity is driven by forecasting. AI models are employed to understand and establish data backup and restoration mechanisms.
+
+##### 4.3.3.1 Deployment
+_Using maturity from sub-module_
+
+#### 4.3.4 Observability
+
+*   **Score 1:** No Dashboards. Data gathering is ad hoc, inconsistent, and undocumented. No Real-time monitoring and tracing is non-existent.
+*   **Score 2:** Dashboards may exist for key metrics, but only in static form (no customization). Dashboards are not centrally located, or dashboard use is not standardised. Dashboard ownership is unclear. Not very efficient in terms of coverage of the services in the real-time monitoring dashboard. Tracing is very rudimentary at best.
+*   **Score 3:** Dashboards exist and support common technical use cases. Dashboard ownership is clear. Tools to support ad hoc queries exist but are somewhat cumbersome (using them requires training or hours of experimentation to produce a result.). Real-time monitoring is in place but covers only around 50% of the existing services. HA setup is not in place. Tracing mechanisms are in place and constantly tweaked based on the need.
+*   **Score 4:** Dashboards support both technical and business use cases. Ad hoc data exploration tools are customizable and support common use cases without training (e.g. by following a recipe) or through intuitive interfaces. Real time monitoring covers around 80% of the services in place and proper alerting mechanisms are setup alongside. Tracing is very effective and used frequently for debugging and RCAs. HA is in place.
+*   **Score 5:** Dashboards are standardized across the business units. Everything in 4 plus very efficient HA setup in place. 100% of the services are covered under real time monitoring with effective visualisations of the data.
+
+##### 4.3.4.1 Monitoring
+_Using maturity from sub-module_
+
+##### 4.3.4.2 Tracing
+_Using maturity from sub-module_
+
+### 4.4 Optimised Evolvability
+
+#### 4.4.1 Infrastructure
+
+*   **Score 1:** Single monolith application deployed as is on a server. No containerization or orchestration is involved. Many manual steps are involved in the overall deployment process. The maintenance process is reactive and production issue-based. No self-healing mechanisms in place.
+*   **Score 2:** The application is split into microservices. However, separation is not absolute, there are many inter-dependencies which lead to complicated deployment processes. Containerization is followed, however, no orchestration as such is in place. Maintenance is more reactive along with a few proactive measures like some amount of monitoring and alerting setup.
+*   **Score 3:** Microservices-based deployments. Canary deployments are possible owing to the proper separation of responsibilities between the microservices' components. Containerized and orchestrated deployment in place. Self-healing mechanisms were thought of, but, not implemented. AI/ML is not in use for maintenance aspects or used at a very rudimentary level.
+*   **Score 4:** Microservices, following canary deployments. Very well containerized and orchestrated. Maintenance is more proactive with proper monitoring and alerting mechanisms put in place. Self-healing mechanisms are in vogue and constantly tracked. AI/ML mechanisms are put in place and followed for various metrics analysis and potential improvements.
+*   **Score 5:** All in 4 + AI/ML is very widely used across the board for trend analysis and improvement suggestions. Self-healing mechanisms are in place and very effectively implemented and tracked.
+
+##### 4.4.1.1 Hosting
+_Using maturity from sub-module_
+
+##### 4.4.1.2 Maintenance
+_Using maturity from sub-module_
+
+##### 4.4.1.3 Virtualisation
+_Using maturity from sub-module_
+
+#### 4.4.2 Process
+
+*   **Score 1:** Not a microservices environment. Even if so, the separation of the responsibilities across the services is not clear. Multiple points of failure. Sometimes, not all points of potential failure have been identified and tracked. Levels of failures are not categorised and tracked. No data is available for the past 6 months or so. Not AI is driven in maintenance and decision making.
+*   **Score 2:** Microservices environment. Points of failure for the environment are identified but not well-tracked. Data are available only for the last 3 months. No structured remediation policies are in place for the points of failure. AI-driven decision-making is not in vogue.
+*   **Score 3:** Points of failure are identified and tracked. Remediation strategies are in place and well defined. Self-healing mechanisms are in place too for remediation and all are tracked effectively. Data on the failures are tracked and available for the last 6 months. AI is not in vogue.
+*   **Score 4:** All points of failure are properly identified and remediation strategies are in place and very effective. Self-healing mechanisms are established and effectively put in place. Data on the failures are tracked and available for a year or more. Levels of failure are categorised and tracked. Many decisions on the maintenance and other fronts are AI-driven albeit being in their rudimentary stages.
+*   **Score 5:** All in 4 + AI is widely implemented and most decisions are influenced by AI data. Points of failure are identified and categorised and remediation strategies are in place and well established.
+
+##### 4.4.2.1 Operations
+_Using maturity from sub-module_
+
+#### 4.4.3 Tools & Technologies
+
+*   **Score 1:** CI/CD is in place but not very much a norm or followed. Most of the deployments are Adhoc and involve manual steps. Freq of deployment is not structured or tracked, again Adhoc and mostly driven by need. No quality gates for deployments. Serverless is not in use.
+*   **Score 2:** CI/CD is in place and followed to some extent. Again, the deployment frequency is not structured or defined. And, deployments could still involve some manual steps. No quality gates for deployment, even if present, is very rudimentary and not adhered to. Serverless is not implemented. Data over the freq of deployment is not tracked very effectively.
+*   **Score 3:** CI/CD is in vogue. Well established and followed. Deployment freq is well established but not strictly adhered to. The same goes with Quality gates for deployment. Serverless is not implemented. Data over the freq of deployment is tracked but only available for the past 6 months or so.
+*   **Score 4:** CI/CD is well established and is the only way deployments happen. Quality gates are in place and well adhered to. Freq of deployment is very well structured and followed to the dot. Data over the freq of deployment for the past year or more is tracked and available. Serverless is in use on a small scale.
+*   **Score 5:** All in 4 + completely serverless implementation or going to be, looking ahead in the roadmap within a short duration of time. Data over the freq of deployment for the past year or more is tracked, available and used for trend analysis and optimisations.
+
+##### 4.4.3.1 Delivery
+_Using maturity from sub-module_
+
+##### 4.4.3.2 Provisioning
+_Using maturity from sub-module_
+
+### 4.5 Site Reliability Engineering (SRE)
+
+#### 4.5.1 Monitoring Distributed Systems
+
+*   **Score 1:**
+    • Common/random defined
+    • Only used within dev team
+    • No relationship between SLO and SLA
+    • No documentation for SLO definitions
+*   **Score 2:**
+    • Defined based on business stability
+    • Documented and awareness within team members
+    • Regular review and refine
+*   **Score 3:**
+    • Defined and agreed between Product and SRE teams
+    • Regular review and refine by the whole team
+    • SLO is guidance for direction of improvement
+*   **Score 4:**
+    • SLI adequately reflects quality of user experiences
+    • SLA definition is driven by SLO
+*   **Score 5:**
+    • Derive improvements from analysis of historical metrics
+    • Continuous improvements on SLO is a norm
+
+##### 4.5.1.1 SLO, SLI, SLA
+_Using maturity from sub-module_
+
+#### 4.5.2 Incident Management
+
+*   **Score 1:**
+    • No explicit incident response workflow
+    • No training for on-call personnels
+    • Plain root cause analysis
+*   **Score 2:**
+    • Defined incident response workflow internally.
+    • No escalation process
+    • Incident response trainings
+    • No explicit definition on incident severity
+    • Template based RCA
+*   **Score 3:**
+    • Standardised incident response workflow and playbooks
+    • Definite incident classification
+    • Formal RCA meetings
+    • Incident reports contain detailed sequence of events
+    • Follow-up improvement measures for each incident
+*   **Score 4:**
+    • Blameless RCA meetings
+    • Incident reports contain areas and results of impact
+    • Regular retrospective on improvement measures
+*   **Score 5:**
+    • Define clear objectives and metrics of service operation
+    • Continuous improvements based on historical metrics
+
+##### 4.5.2.1 Incident Management
+_Using maturity from sub-module_
+
+##### 4.5.2.2 Exception Handling
+_Using maturity from sub-module_
+
+##### 4.5.2.3 Emergency Response
+_Using maturity from sub-module_
+
+#### 4.5.3 Toil Elimination
+
+*   **Score 1:** When starting with Kubernetes, it is important that you start out with as much hands-on experience as possible. Initially you'll be doing ad-hoc deployments with kubectl and kustomize.
+*   **Score 2:** For your initial steps into production, you'll be using CI or release tooling, kubectl and kustomize to potentially deploy your first smaller applications. It's really important by now that you develop key skills in Kubernetes configuration.
+*   **Score 3:** Because consistency is important, you may be starting to write Helm Charts for your application releases. You may also be starting to take your first steps into GitOps with Flux and Argo, introducing controllers to manage your release and operations.
+*   **Score 4:** Not only are you using GitOps operators for rapid deployment, but you may also be using them for development and test purposes. You'll be expecting most of your software to be packaged with Helm with the feedback loop being closed as quickly as possible to reduce configuration drift.
+*   **Score 5:** You're now in full production with GitOps operators and controls, and your release and operations workflows reside within Git.
+
+##### 4.5.3.1 Automation Or Application release
+_Using maturity from sub-module_
+
+#### 4.5.4 Organisation
+
+*   **Score 1:** Cloud native framework is driving your business and technical goals. You and your team are new to the technology, however do have some basic technical understanding and some pre-existing qualifications. Your business leaders understand the benefits of cloud native.
+*   **Score 2:** Individuals are actively invested in training and skills. The outcome is that small pockets of SMEs and expertise are appearing. DevOps has started to appear with inclusion of cloud skill engineers and developer groups offering platform skills. Cloud Native efforts are also owned by members of leadership.
+*   **Score 3:** The team's competency is growing and there is commitment from Dev, Ops and security. You are formalizing expertise and curating standards and accelerators. Cloud Native becomes a first-class citizen for strategy.
+*   **Score 4:** As you improve, you are shifting competency to the development team for them to self-service. Full commitment from leadership.
+*   **Score 5:** You've reached maturity, the organization is skilled and you have DevOps and DevSecOps working. Teams are comfortable experimenting with new technologies and sandbox trials.
+
+##### 4.5.4.1 Training
+_Using maturity from sub-module_
+
+## 5. Cloud Platform
+
+### 5.3 Cloud readiness
+
+#### 5.3.1 Org readiness
+
+*   **Score 1:** The Organisations have no business strategy and budget forecasted for moving to the cloud. They just have an initial idea of moving to the cloud.
+*   **Score 2:** The Organisations have a preliminary strategy for the move to the cloud but lack sponsorship. They need to create the business case and present it to stakeholders for getting sponsorship. They are working on vision and goals.
+*   **Score 3:** The organisation have a clear strategy to move to the cloud and is aware of cloud benefits. Management has a willingness to sponsor but is looking for a strong business case.
+*   **Score 4:** The Organisations have sponsorship for moving to the cloud and identified business strategies for the same. They are aware of the benefit of moving to the cloud but have no detailed cloud adoption plan laid out for moving to the cloud.
+*   **Score 5:** The Organisations have a clear strategy and business sponsorship for moving to the cloud. They have laid out the high-level plan for both cloud migration and DC exit. They have a solid long-term roadmap defined for key business objectives. Cloud migration strategy and business vision are well aligned.
+
+#### 5.3.2 Readiness and compatibility of applications
+
+*   **Score 1:** The Organisation have no tech strategy and experience in moving any workload to the cloud.
+*   **Score 2:** The Organisations have ideas and are aware of the tech stack required for moving to the cloud. They lack experience in moving any workload to the cloud.
+*   **Score 3:** The organization has some experience in migrating the workload to the cloud predominantly using Lift and shift. They lack experience in cloud-native application development and hybrid cloud. Upskilling program is identified for the dev team.
+*   **Score 4:** The organization has good experience in migrating complex workloads in the lift and shift model. They have fair experience in hybrid cloud strategy and cloud-native application development.
+*   **Score 5:** The organization have solid experience in cloud migration projects. They have successfully executed many migration projects to the cloud with automation for repeated tasks. They are well versed with different types of migration projects such as Rehost, Re Platform, Re-Architect.

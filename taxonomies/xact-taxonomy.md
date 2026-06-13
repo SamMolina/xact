@@ -117,16 +117,74 @@ Hierarchy only (categories → modules → sub-modules → parameters). Maturity
 ## 4. Operational Efficiency
 
 - **4.1 Product & platform stability**
+  - 4.1.1 Availability
+  - 4.1.1.1 Operations downtime
+  - 4.1.2 Success indicators
+    - 4.1.2.1 Success indicators
+  - 4.1.3 Infrastructure
+    - 4.1.3.1 Infrastructure
+  - 4.1.4 Quality
+    - 4.1.4.1 Quality
 - **4.2 People, process & tools**
+  - 4.2.1 Incident management
+    - 4.2.1.1 Incident reporting and tracking
+  - 4.2.2 Observability
+    - 4.2.2.1 Alerting
+    - 4.2.2.2 Logging
+    - 4.2.2.3 Monitoring
+  - 4.2.3 Infrastructure
+    - 4.2.3.1 Accessibility
+    - 4.2.3.2 Compliance
+    - 4.2.3.3 Delivery
+    - 4.2.3.4 Hosting
+    - 4.2.3.5 Maintenance
+  - 4.2.4 Quality
+    - 4.2.4.1 Resilience
+    - 4.2.4.2 Security
+  - 4.2.5 Culture
+    - 4.2.5.1 Execution
 - **4.3 Infrastructure Stability**
+  - 4.3.1 Availability
+    - 4.3.1.1 Capacity
+    - 4.3.1.2 Performance
+    - 4.3.1.3 Toil
+  - 4.3.2 Success indicators
+    - 4.3.2.1 Metrics
+    - 4.3.2.2 Toil
+  - 4.3.3 Infrastructure
+    - 4.3.3.1 Deployment
+  - 4.3.4 Observability
+    - 4.3.4.1 Monitoring
+    - 4.3.4.2 Tracing
 - **4.4 Optimised Evolvability**
+  - 4.4.1 Infrastructure
+    - 4.4.1.1 Hosting
+    - 4.4.1.2 Maintenance
+    - 4.4.1.3 Virtualisation
+  - 4.4.2 Process
+    - 4.4.2.1 Operations
+  - 4.4.3 Tools & Technologies
+    - 4.4.3.1 Delivery
+    - 4.4.3.2 Provisioning
 - **4.5 Site Reliability Engineering (SRE)**
+  - 4.5.1 Monitoring Distributed Systems
+    - 4.5.1.1 SLO, SLI, SLA
+  - 4.5.2 Incident Management
+    - 4.5.2.1 Incident Management
+    - 4.5.2.2 Exception Handling
+    - 4.5.2.3 Emergency Response
+  - 4.5.3 Toil Elimination
+    - 4.5.3.1 Automation Or Application release
+  - 4.5.4 Organisation
+    - 4.5.4.1 Training
 
 ## 5. Cloud Platform
 
 - **5.1 WIP - Cloud Modernization**
 - **5.2 Cloud Operating Model**
 - **5.3 Cloud readiness**
+  - 5.3.1 Org readiness
+  - 5.3.2 Readiness and compatibility of applications
 - **5.4 FinOps**
 - **5.5 Cloud Architecture**
 
